@@ -28,6 +28,8 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
+      - name: cmake
+        run: sudo apt-get install update cmake
       - name: West Init
         run: west init -l config
       - name: West Update

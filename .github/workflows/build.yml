@@ -28,8 +28,9 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: cmake
-        run: apt-get install update cmake
+      - name: Get latest CMake and ninja
+        uses: lukka/get-cmake@latest
+
       - name: West Init
         run: west init -l config
       - name: West Update
